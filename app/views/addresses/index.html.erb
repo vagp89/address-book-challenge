@@ -1,0 +1,26 @@
+<%= render 'shared/navbar' %>
+<div class="container addresses">
+  <h1 class="text"> Write your Address</h1>
+  <%= render 'form' %>
+    <br>
+  <h1> All the Addresses </h1>
+  <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Address</th>
+      <th scope="col">Latitude</th>
+      <th scope="col">Longitude</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @addresses.each do |address| %>
+      <tr>
+        <td><%= address.address %></td>
+        <td><%= address.latitude %></td>
+        <td><%= address.longitude %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
